@@ -1,15 +1,5 @@
 import React from "react";
-import {
-  User,
-  Mail,
-  Phone,
-  MapPin,
-  ShieldCheck,
-  GraduationCap,
-  Award,
-  CheckCircle2,
-  Building2,
-} from "lucide-react";
+import { GraduationCap } from "lucide-react";
 import { resumeData } from "../../data/resumeData";
 import resumePhoto from "../../assets/resumePhoto.png";
 
@@ -35,12 +25,10 @@ export default function Slide1_Profile() {
         {/* Header */}
         <div className="ppt-slide-header">
           <div>
-            <span className="ppt-slide-num">SLIDE 01 / 05</span>
-            <h1 className="ppt-slide-title">지원이력서 및 인적사항</h1>
+            <span className="ppt-slide-num">SLIDE 01 / 15</span>
+            <h1 className="ppt-slide-title">인적사항</h1>
           </div>
-          <div className="ppt-slide-subtitle">
-            기본 인적사항 · 학력사항 · 핵심 프로필
-          </div>
+          <div className="ppt-slide-subtitle">인적사항 · 학력사항</div>
         </div>
 
         {/* Slide Body Content */}
@@ -56,9 +44,9 @@ export default function Slide1_Profile() {
                   height: "120px",
                   borderRadius: "50%",
                   overflow: "hidden",
-                  border: "1px solid #2563eb",
-                  boxShadow: "0 8px 16px rgba(37, 99, 235, 0.15)",
-                  background: "#eff6ff",
+                  border: "2px solid #0045B0",
+                  boxShadow: "0 8px 16px rgba(0, 69, 176, 0.25)",
+                  background: "#EEF4FF",
                   flexShrink: 0,
                 }}
               >
@@ -68,7 +56,7 @@ export default function Slide1_Profile() {
                   style={{ width: "100%", height: "100%", objectFit: "cover" }}
                   onError={(e) => {
                     e.target.style.display = "none";
-                    e.target.parentNode.innerHTML = `<div style="width:100%;height:100%;display:flex;align-items:center;justify-content:center;background:#dbeafe;color:#1d4ed8;font-size:2.5rem;font-weight:800;">유</div>`;
+                    e.target.parentNode.innerHTML = `<div style="width:100%;height:100%;display:flex;align-items:center;justify-content:center;background:#B8D3FF;color:#0045B0;font-size:2.5rem;font-weight:800;">유</div>`;
                   }}
                 />
               </div>
@@ -85,14 +73,14 @@ export default function Slide1_Profile() {
                   style={{
                     fontSize: "1.75rem",
                     fontWeight: "800",
-                    color: "#0f172a",
+                    color: "#0a192f",
                   }}
                 >
                   {personalInfo.name}{" "}
                   <span
                     style={{
                       fontSize: "1rem",
-                      color: "#64748b",
+                      color: "#1E65D6",
                       fontWeight: "500",
                     }}
                   >
@@ -107,7 +95,7 @@ export default function Slide1_Profile() {
               style={{
                 marginTop: "1.25rem",
                 paddingTop: "1rem",
-                borderTop: "1px solid #dbeafe",
+                borderTop: "1px solid #B8D3FF",
                 display: "grid",
                 gridTemplateColumns: "1fr 1fr",
                 gap: "0.625rem 1rem",
@@ -115,19 +103,19 @@ export default function Slide1_Profile() {
               }}
             >
               <div>
-                <strong style={{ color: "#1e3a8a" }}>생년월일 (연령):</strong>{" "}
+                <strong style={{ color: "#0045B0" }}>생년월일 (연령):</strong>{" "}
                 {personalInfo.birth} (만 {getAge(personalInfo.birth)}세)
               </div>
               <div>
-                <strong style={{ color: "#1e3a8a" }}>이메일:</strong>{" "}
+                <strong style={{ color: "#0045B0" }}>이메일:</strong>{" "}
                 {personalInfo.email}
               </div>
               <div>
-                <strong style={{ color: "#1e3a8a" }}>핸드폰:</strong>{" "}
+                <strong style={{ color: "#0045B0" }}>핸드폰:</strong>{" "}
                 {personalInfo.phone}
               </div>
               <div>
-                <strong style={{ color: "#1e3a8a" }}>병역사항:</strong>{" "}
+                <strong style={{ color: "#0045B0" }}>병역사항:</strong>{" "}
                 {personalInfo.military}
               </div>
             </div>
@@ -144,7 +132,7 @@ export default function Slide1_Profile() {
                   display: "flex",
                   alignItems: "center",
                   gap: "0.5rem",
-                  color: "#2563eb",
+                  color: "#0045B0",
                   fontWeight: "800",
                   marginBottom: "0.75rem",
                 }}
@@ -167,20 +155,20 @@ export default function Slide1_Profile() {
                       justifyContent: "space-between",
                       alignItems: "center",
                       fontSize: "0.875rem",
-                      borderBottom: idx === 0 ? "1px dashed #e2e8f0" : "none",
+                      borderBottom: idx === 0 ? "1px dashed #B8D3FF" : "none",
                       paddingBottom: idx === 0 ? "0.5rem" : 0,
                     }}
                   >
                     <div>
                       <strong
-                        style={{ fontSize: "0.9375rem", color: "#0f172a" }}
+                        style={{ fontSize: "0.9375rem", color: "#0a192f" }}
                       >
                         {edu.institution}
                       </strong>{" "}
                       ({edu.major})
                       <span
                         style={{
-                          color: "#2563eb",
+                          color: "#0045B0",
                           marginLeft: "0.5rem",
                           fontWeight: "600",
                         }}
@@ -188,19 +176,8 @@ export default function Slide1_Profile() {
                         [{edu.status}]
                       </span>
                     </div>
-                    <div style={{ textAlign: "right", color: "#64748b" }}>
+                    <div style={{ textAlign: "right", color: "#1E65D6" }}>
                       {edu.period}{" "}
-                      {edu.score !== "-" && (
-                        <span
-                          style={{
-                            fontWeight: "700",
-                            color: "#1d4ed8",
-                            marginLeft: "4px",
-                          }}
-                        >
-                          ({edu.score})
-                        </span>
-                      )}
                     </div>
                   </div>
                 ))}
@@ -213,13 +190,17 @@ export default function Slide1_Profile() {
                 <div
                   key={idx}
                   className="ppt-box"
-                  style={{ background: "#f8fafc", padding: "0.875rem 1rem" }}
+                  style={{
+                    background: "#EEF4FF",
+                    border: "1px solid #B8D3FF",
+                    padding: "0.875rem 1rem",
+                  }}
                 >
                   <div
                     style={{
                       fontSize: "0.75rem",
                       fontWeight: "700",
-                      color: "#64748b",
+                      color: "#1E65D6",
                     }}
                   >
                     {st.label}
@@ -228,13 +209,13 @@ export default function Slide1_Profile() {
                     style={{
                       fontSize: "1.25rem",
                       fontWeight: "800",
-                      color: "#1e40af",
+                      color: "#0045B0",
                       marginTop: "0.125rem",
                     }}
                   >
                     {st.value}
                   </div>
-                  <div style={{ fontSize: "0.75rem", color: "#475569" }}>
+                  <div style={{ fontSize: "0.75rem", color: "#2d3748" }}>
                     {st.sub}
                   </div>
                 </div>
@@ -247,7 +228,7 @@ export default function Slide1_Profile() {
       {/* Slide Footer */}
       <div className="ppt-slide-footer">
         <span>포트폴리오 | 유준열 (JunYeol Yu)</span>
-        <span>SLIDE 01 OF 05</span>
+        <span>SLIDE 01 OF 15</span>
       </div>
     </div>
   );

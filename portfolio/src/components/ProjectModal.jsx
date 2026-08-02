@@ -1,5 +1,5 @@
 import React from 'react';
-import { X, ExternalLink, Code, Layers, Calendar, CheckCircle2 } from 'lucide-react';
+import { X, Calendar } from 'lucide-react';
 
 export default function ProjectModal({ project, onClose }) {
   if (!project) return null;
@@ -14,10 +14,10 @@ export default function ProjectModal({ project, onClose }) {
             <span className="badge badge-blue" style={{ marginBottom: '0.5rem' }}>
               {project.category}
             </span>
-            <h2 style={{ fontSize: '1.75rem', fontWeight: '800', color: '#0f172a', lineHeight: 1.2 }}>
+            <h2 style={{ fontSize: '1.75rem', fontWeight: '800', color: '#0a192f', lineHeight: 1.2 }}>
               {project.title}
             </h2>
-            <div style={{ fontSize: '0.875rem', color: '#64748b', marginTop: '0.25rem', display: 'flex', alignItems: 'center', gap: '4px' }}>
+            <div style={{ fontSize: '0.875rem', color: '#1E65D6', marginTop: '0.25rem', display: 'flex', alignItems: 'center', gap: '4px' }}>
               <Calendar size={14} /> 수행 기간: {project.period}
             </div>
           </div>
@@ -25,7 +25,7 @@ export default function ProjectModal({ project, onClose }) {
           <button 
             onClick={onClose}
             style={{
-              background: '#f1f5f9',
+              background: '#EEF4FF',
               border: 'none',
               borderRadius: '50%',
               width: '2.25rem',
@@ -34,7 +34,7 @@ export default function ProjectModal({ project, onClose }) {
               alignItems: 'center',
               justifyContent: 'center',
               cursor: 'pointer',
-              color: '#64748b'
+              color: '#0045B0'
             }}
           >
             <X size={20} />
@@ -42,16 +42,16 @@ export default function ProjectModal({ project, onClose }) {
         </div>
 
         {/* Description */}
-        <div style={{ padding: '1rem', background: '#eff6ff', borderRadius: '12px', borderLeft: '4px solid #2563eb', marginBottom: '1.5rem' }}>
-          <p style={{ color: '#1e3a8a', fontSize: '1rem', lineHeight: 1.6, fontWeight: '500' }}>
+        <div style={{ padding: '1rem', background: '#EEF4FF', borderRadius: '12px', borderLeft: '4px solid #0045B0', marginBottom: '1.5rem' }}>
+          <p style={{ color: '#0045B0', fontSize: '1rem', lineHeight: 1.6, fontWeight: '500' }}>
             {project.desc}
           </p>
         </div>
 
         {/* Tech Stack List */}
         <div style={{ marginBottom: '1.5rem' }}>
-          <div style={{ fontSize: '0.9375rem', fontWeight: '700', color: '#0f172a', marginBottom: '0.75rem', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
-            <Layers size={18} color="#2563eb" /> 사용 기술 스택 (Tech Stack)
+          <div style={{ fontSize: '0.9375rem', fontWeight: '700', color: '#0a192f', marginBottom: '0.75rem', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+            <Layers size={18} color="#0045B0" /> 사용 기술 스택 (Tech Stack)
           </div>
           <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.5rem' }}>
             {project.techStack.map((tech, idx) => (

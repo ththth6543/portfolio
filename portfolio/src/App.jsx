@@ -1,5 +1,4 @@
-import React from 'react';
-import PPTDeck from './components/PPTDeck';
+import PPTDeck from "./components/PPTDeck";
 
 export default function App() {
   return (

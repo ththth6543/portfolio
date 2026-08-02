@@ -1,5 +1,5 @@
 import React from 'react';
-import { BookOpen, Clock, Building2, CheckCircle2, Award, Sparkles } from 'lucide-react';
+import { Clock, CheckCircle2 } from 'lucide-react';
 import { resumeData } from '../../data/resumeData';
 
 export default function Slide2_Training() {
@@ -11,7 +11,7 @@ export default function Slide2_Training() {
         {/* Header */}
         <div className="ppt-slide-header">
           <div>
-            <span className="ppt-slide-num">SLIDE 02 / 05</span>
+            <span className="ppt-slide-num">SLIDE 02 / 15</span>
             <h1 className="ppt-slide-title">교육 및 연수사항</h1>
           </div>
           <div className="ppt-slide-subtitle">
@@ -27,15 +27,15 @@ export default function Slide2_Training() {
             <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', flexWrap: 'wrap', gap: '0.5rem' }}>
               <div>
                 <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
-                  <span className="ppt-badge" style={{ background: '#2563eb', color: '#fff' }}>핵심 실무 과정</span>
-                  <span style={{ fontSize: '0.875rem', fontWeight: '800', color: '#1d4ed8', display: 'flex', alignItems: 'center', gap: '4px' }}>
+                  <span className="ppt-badge" style={{ background: '#0045B0', color: '#fff', border: 'none' }}>핵심 실무 과정</span>
+                  <span style={{ fontSize: '0.875rem', fontWeight: '800', color: '#0045B0', display: 'flex', alignItems: 'center', gap: '4px' }}>
                     <Clock size={16} /> 480시간 수료
                   </span>
                 </div>
-                <h2 style={{ fontSize: '1.375rem', fontWeight: '800', color: '#0f172a', marginTop: '0.375rem' }}>
+                <h2 style={{ fontSize: '1.375rem', fontWeight: '800', color: '#0a192f', marginTop: '0.375rem' }}>
                   {trainings[0].title}
                 </h2>
-                <div style={{ fontSize: '0.875rem', color: '#475569', marginTop: '0.25rem' }}>
+                <div style={{ fontSize: '0.875rem', color: '#2d3748', marginTop: '0.25rem' }}>
                   주관 기관: <strong>{trainings[0].organizer}</strong> ({trainings[0].period})
                 </div>
               </div>
@@ -46,16 +46,16 @@ export default function Slide2_Training() {
               {trainings[0].details.map((detail, idx) => (
                 <div key={idx} style={{
                   background: '#ffffff',
-                  border: '1px solid #dbeafe',
+                  border: '1px solid #B8D3FF',
                   borderRadius: '10px',
                   padding: '0.875rem 1rem',
                   fontSize: '0.875rem',
-                  color: '#334155',
+                  color: '#2d3748',
                   display: 'flex',
                   alignItems: 'flex-start',
                   gap: '0.5rem'
                 }}>
-                  <CheckCircle2 size={16} color="#2563eb" style={{ marginTop: '2px', flexShrink: 0 }} />
+                  <CheckCircle2 size={16} color="#0045B0" style={{ marginTop: '2px', flexShrink: 0 }} />
                   <span>{detail}</span>
                 </div>
               ))}
@@ -69,12 +69,12 @@ export default function Slide2_Training() {
             <div className="ppt-box" style={{ padding: '1.25rem' }}>
               <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '0.5rem' }}>
                 <span className="ppt-badge">{trainings[1].badge}</span>
-                <span style={{ fontSize: '0.8125rem', color: '#64748b', fontWeight: '600' }}>{trainings[1].period} ({trainings[1].hours})</span>
+                <span style={{ fontSize: '0.8125rem', color: '#1E65D6', fontWeight: '600' }}>{trainings[1].period} ({trainings[1].hours})</span>
               </div>
-              <h3 style={{ fontSize: '1.0625rem', fontWeight: '800', color: '#0f172a' }}>
+              <h3 style={{ fontSize: '1.0625rem', fontWeight: '800', color: '#0a192f' }}>
                 {trainings[1].title}
               </h3>
-              <ul style={{ marginTop: '0.75rem', paddingLeft: '1.2rem', fontSize: '0.8125rem', color: '#475569', display: 'flex', flexDirection: 'column', gap: '0.25rem' }}>
+              <ul style={{ marginTop: '0.75rem', paddingLeft: '1.2rem', fontSize: '0.8125rem', color: '#2d3748', display: 'flex', flexDirection: 'column', gap: '0.25rem' }}>
                 {trainings[1].details.map((d, dIdx) => (
                   <li key={dIdx}>{d}</li>
                 ))}
@@ -85,12 +85,12 @@ export default function Slide2_Training() {
             <div className="ppt-box" style={{ padding: '1.25rem' }}>
               <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '0.5rem' }}>
                 <span className="ppt-badge">{trainings[2].badge}</span>
-                <span style={{ fontSize: '0.8125rem', color: '#64748b', fontWeight: '600' }}>{trainings[2].period} ({trainings[2].hours})</span>
+                <span style={{ fontSize: '0.8125rem', color: '#1E65D6', fontWeight: '600' }}>{trainings[2].period} ({trainings[2].hours})</span>
               </div>
-              <h3 style={{ fontSize: '1.0625rem', fontWeight: '800', color: '#0f172a' }}>
+              <h3 style={{ fontSize: '1.0625rem', fontWeight: '800', color: '#0a192f' }}>
                 {trainings[2].title}
               </h3>
-              <ul style={{ marginTop: '0.75rem', paddingLeft: '1.2rem', fontSize: '0.8125rem', color: '#475569', display: 'flex', flexDirection: 'column', gap: '0.25rem' }}>
+              <ul style={{ marginTop: '0.75rem', paddingLeft: '1.2rem', fontSize: '0.8125rem', color: '#2d3748', display: 'flex', flexDirection: 'column', gap: '0.25rem' }}>
                 {trainings[2].details.map((d, dIdx) => (
                   <li key={dIdx}>{d}</li>
                 ))}
@@ -105,7 +105,7 @@ export default function Slide2_Training() {
       {/* Footer */}
       <div className="ppt-slide-footer">
         <span>포트폴리오 | 유준열 (JunYeol Yu)</span>
-        <span>SLIDE 02 OF 05</span>
+        <span>SLIDE 02 OF 15</span>
       </div>
     </div>
   );

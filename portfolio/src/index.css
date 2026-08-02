@@ -1,30 +1,54 @@
-/* PPT Presentation Deck Style Portfolio CSS */
+/* PPT Presentation Deck Style Portfolio CSS - Cobalt Royal Theme (#0045B0 Palette) */
 :root {
-  --font-sans: 'Plus Jakarta Sans', 'Noto Sans KR', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-sans:
+    "Plus Jakarta Sans", "Noto Sans KR", -apple-system, BlinkMacSystemFont,
+    sans-serif;
 
-  /* White & Blue Theme Palette */
-  --bg-main: #f1f5f9;
+  /* Derived Cobalt Color Palette */
+  --cobalt-dark: #003388;
+  --cobalt-main: #0045b0;
+  --cobalt-medium: #1e65d6;
+  --cobalt-soft: #5b96f5;
+  --cobalt-border: #b8d3ff;
+  --cobalt-bg: #eef4ff;
+
+  /* Backgrounds */
+  --bg-main: #f0f4fa;
   --bg-slide: #ffffff;
   --bg-card: #ffffff;
-  --bg-subtle: #f8fafc;
-  
-  --border-light: #e2e8f0;
-  --border-blue: #bfdbfe;
+  --bg-subtle: #eef4ff;
 
-  --blue-50: #eff6ff;
-  --blue-100: #dbeafe;
-  --blue-500: #3b82f6;
-  --blue-600: #2563eb;
-  --blue-700: #1d4ed8;
-  --blue-800: #1e40af;
-  --blue-900: #1e3a8a;
+  /* Borders */
+  --border-light: #e1e9f5;
+  --border-blue: #b8d3ff;
 
-  --text-dark: #0f172a;
-  --text-main: #334155;
-  --text-muted: #64748b;
+  /* Palette Mappings */
+  --blue-50: #eef4ff;
+  --blue-100: #b8d3ff;
+  --blue-200: #5b96f5;
+  --blue-500: #1e65d6;
+  --blue-600: #0045b0;
+  --blue-700: #003388;
+  --blue-800: #002566;
+  --blue-900: #001844;
 
-  --shadow-slide: 0 20px 40px -15px rgba(37, 99, 235, 0.12), 0 0 1px rgba(0, 0, 0, 0.1);
-  --shadow-card: 0 4px 12px rgba(0, 0, 0, 0.04);
+  /* Text Colors */
+  --text-dark: #0a192f;
+  --text-main: #2d3748;
+  --text-muted: #0045b0;
+
+  /* newsight Signature Palette (#7066E0 Violet Indigo Theme) */
+  --newsight-accent: #7066e0;
+  --newsight-medium: #8b80f9;
+  --newsight-soft: #a79ffd;
+  --newsight-border: #c4c0fc;
+  --newsight-bg: #f4f3ff;
+  --newsight-dark: #1e1d25;
+
+  /* Shadows */
+  --shadow-slide:
+    0 20px 40px -15px rgba(0, 69, 176, 0.18), 0 0 1px rgba(0, 0, 0, 0.08);
+  --shadow-card: 0 4px 12px rgba(0, 69, 176, 0.06);
 }
 
 * {
@@ -43,11 +67,10 @@ body {
   overflow-x: hidden;
 }
 
-/* Slide Container */
 .ppt-viewport {
   max-width: 1280px;
   margin: 0 auto;
-  padding: 1.5rem;
+  padding: 1.25rem;
 }
 
 .ppt-slide {
@@ -55,25 +78,76 @@ body {
   border-radius: 20px;
   border: 1px solid var(--border-light);
   box-shadow: var(--shadow-slide);
-  min-height: 720px;
+  width: 100%;
+  aspect-ratio: 16 / 9;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding: 2.5rem 3rem;
+  padding: 1.75rem 2.25rem;
   position: relative;
   overflow: hidden;
+  box-sizing: border-box;
   animation: slideFadeIn 0.35s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 /* Top Decorative Accent Line */
 .ppt-slide::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
   height: 6px;
-  background: linear-gradient(90deg, #1d4ed8 0%, #2563eb 50%, #60a5fa 100%);
+  background: linear-gradient(90deg, #0045b0 0%, #1e65d6 50%, #5b96f5 100%);
+}
+
+/* Dark Theme PPT Slide for newsight section */
+.ppt-slide-dark {
+  background: #14131a !important;
+  color: #f2f1f4 !important;
+  border: 1px solid #2e2c38 !important;
+  box-shadow: 0 20px 45px -10px rgba(0, 0, 0, 0.7), 0 0 1px rgba(112, 102, 224, 0.4) !important;
+}
+
+.ppt-slide-dark::before {
+  background: linear-gradient(90deg, #7066e0 0%, #8b80f9 50%, #63d6f0 100%) !important;
+}
+
+.ppt-slide-dark .ppt-slide-header {
+  border-bottom: 2px solid #2e2c38 !important;
+}
+
+.ppt-slide-dark .ppt-slide-title {
+  color: #ffffff !important;
+}
+
+.ppt-slide-dark .ppt-slide-subtitle {
+  color: #a79ffd !important;
+}
+
+.ppt-slide-dark .ppt-slide-num {
+  background: rgba(112, 102, 224, 0.2) !important;
+  color: #a79ffd !important;
+  border: 1px solid #7066e0 !important;
+}
+
+.ppt-slide-dark .ppt-slide-footer {
+  border-top: 1px solid #2e2c38 !important;
+  color: #8b899a !important;
+}
+
+.ppt-slide-dark .ppt-box {
+  background: #1e1d25 !important;
+  border-color: #2e2c38 !important;
+  color: #f2f1f4 !important;
+}
+
+.ppt-slide-dark .ppt-box p {
+  color: #b3b1c2 !important;
+}
+
+.ppt-slide-dark .ppt-box li {
+  color: #b3b1c2 !important;
 }
 
 /* Slide Header */
@@ -81,21 +155,21 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
-  border-bottom: 2px solid #eff6ff;
-  padding-bottom: 1.25rem;
-  margin-bottom: 1.75rem;
+  border-bottom: 2px solid #eef4ff;
+  padding-bottom: 0.75rem;
+  margin-bottom: 1rem;
 }
 
 .ppt-slide-num {
-  font-size: 0.8125rem;
+  font-size: 0.875rem;
   font-weight: 800;
-  color: var(--blue-600);
+  color: #0045b0;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  background: var(--blue-50);
-  padding: 0.25rem 0.75rem;
+  background: #eef4ff;
+  padding: 0.3rem 0.85rem;
   border-radius: 9999px;
-  border: 1px solid var(--blue-100);
+  border: 1px solid #b8d3ff;
 }
 
 .ppt-slide-title {
@@ -108,7 +182,8 @@ body {
 
 .ppt-slide-subtitle {
   font-size: 0.9375rem;
-  color: var(--text-muted);
+  color: #1e65d6;
+  font-weight: 600;
 }
 
 /* Slide Footer */
@@ -116,11 +191,12 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-top: 1px solid var(--border-light);
-  padding-top: 1.25rem;
-  margin-top: 2rem;
-  font-size: 0.8125rem;
-  color: var(--text-muted);
+  border-top: 1px solid #b8d3ff;
+  padding-top: 0.75rem;
+  margin-top: 1rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #1e65d6;
 }
 
 /* Navigation Controls Bar */
@@ -130,9 +206,9 @@ body {
   z-index: 50;
   background: rgba(255, 255, 255, 0.95);
   backdrop-filter: blur(12px);
-  border-bottom: 1px solid var(--border-light);
-  padding: 0.75rem 1.5rem;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  border-bottom: 1px solid #b8d3ff;
+  padding: 0.5rem 1.25rem;
+  box-shadow: 0 4px 12px rgba(0, 69, 176, 0.08);
 }
 
 .ppt-tab-btn {
@@ -151,29 +227,29 @@ body {
 }
 
 .ppt-tab-btn.active {
-  background: var(--blue-600);
+  background: #0045b0;
   color: #ffffff;
-  box-shadow: 0 4px 10px rgba(37, 99, 235, 0.3);
+  box-shadow: 0 4px 10px rgba(0, 69, 176, 0.35);
 }
 
 .ppt-tab-btn:hover:not(.active) {
-  background: var(--blue-50);
-  color: var(--blue-600);
+  background: #eef4ff;
+  color: #0045b0;
 }
 
 /* Key Callout Card */
 .ppt-box {
   background: #ffffff;
-  border: 1px solid var(--border-light);
+  border: 1px solid #b8d3ff;
   border-radius: 12px;
   padding: 1.25rem;
   box-shadow: var(--shadow-card);
 }
 
 .ppt-box-blue {
-  background: linear-gradient(135deg, #eff6ff 0%, #ffffff 100%);
-  border: 1px solid var(--blue-100);
-  border-left: 4px solid var(--blue-600);
+  background: linear-gradient(135deg, #eef4ff 0%, #ffffff 100%);
+  border: 1px solid #b8d3ff;
+  border-left: 4px solid #0045b0;
 }
 
 /* Grid Layout Helper */
@@ -198,9 +274,75 @@ body {
   border-radius: 6px;
   font-size: 0.75rem;
   font-weight: 700;
-  background: var(--blue-50);
-  color: var(--blue-700);
-  border: 1px solid var(--blue-100);
+  background: #eef4ff;
+  color: #0045b0;
+  border: 1px solid #b8d3ff;
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.25rem 0.6rem;
+  border-radius: 6px;
+  font-size: 0.75rem;
+  font-weight: 700;
+}
+
+.badge-blue {
+  background: #eef4ff;
+  color: #0045b0;
+  border: 1px solid #b8d3ff;
+}
+
+.badge-gray {
+  background: #f0f4fa;
+  color: #0045b0;
+  border: 1px solid #b8d3ff;
+}
+
+/* Buttons */
+.btn {
+  padding: 0.625rem 1.25rem;
+  border-radius: 8px;
+  font-weight: 700;
+  font-size: 0.875rem;
+  cursor: pointer;
+  border: none;
+  transition: all 0.2s ease;
+}
+
+.btn-primary {
+  background: #0045b0;
+  color: #ffffff;
+}
+
+.btn-primary:hover {
+  background: #003388;
+  box-shadow: 0 4px 12px rgba(0, 69, 176, 0.3);
+}
+
+/* Modal Overlay & Card */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(10, 25, 47, 0.5);
+  backdrop-filter: blur(4px);
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+}
+
+.modal-content {
+  background: #ffffff;
+  border-radius: 16px;
+  width: 100%;
+  max-width: 640px;
+  padding: 2rem;
+  box-shadow: 0 24px 48px rgba(10, 25, 47, 0.25);
+  border: 1px solid #b8d3ff;
+  animation: slideFadeIn 0.25s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 /* Animations */

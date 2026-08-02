@@ -18,7 +18,6 @@ export const resumeData = {
     {
       label: "학력 (전공)",
       value: "숭실대 학사",
-      sub: "소프트웨어학부 (84.5/100)",
     },
     {
       label: "전문 교육 수료",
@@ -37,7 +36,6 @@ export const resumeData = {
       institution: "숭실대학교",
       status: "졸업",
       major: "소프트웨어학부",
-      score: "84.5 / 100",
       type: "본교 / 주간",
     },
     {
@@ -117,8 +115,8 @@ export const resumeData = {
     {
       id: "newsight",
       title: "newsight",
-      category: "개인 프로젝트",
-      period: "2026.05 ~ 2026.07",
+      category: "팀 프로젝트(3인)",
+      period: "2026.07 ~ 2026.07",
       techStack: [
         "React",
         "Spring Boot",
@@ -190,7 +188,7 @@ export const resumeData = {
     {
       id: "travelbook",
       title: "트래블북 (Travel Book)",
-      category: "기업 과제",
+      category: "기업 취업과정 과제",
       period: "2026.04",
       techStack: [
         "Flutter(Dart)",
@@ -205,7 +203,7 @@ export const resumeData = {
     {
       id: "dna",
       title: "DNA (Daily National Assembly)",
-      category: "팀 프로젝트",
+      category: "팀 프로젝트(5인)",
       period: "2025.04 ~ 2025.06",
       techStack: ["Flutter(Dart)", "FastAPI"],
       desc: "사용자 관심 카테고리에 맞춘 국회 의정 요약 및 최신 회의록 신속 제공 플랫폼",
@@ -248,12 +246,6 @@ export const resumeData = {
       issuer: "한국생산성본부",
       date: "2009.07",
       category: "OA",
-    },
-    {
-      name: "한자 7급",
-      issuer: "대한검정회",
-      date: "2007.09",
-      category: "어학/교양",
     },
   ],
   awards: [
